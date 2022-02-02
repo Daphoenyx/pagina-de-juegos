@@ -29,10 +29,6 @@ footer {
     font-size: 150%;
 }
 
-textarea {
-    display: block
-}
-
 article {
     font-family: RobotoMono-Regular;
     font-size: 90%;
@@ -41,6 +37,38 @@ article {
 form {
     font-family: RobotoMono-Regular;
     font-size: 90%;
+    padding: 30px 100px 30px 100px
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: 10px;
+    border: solid 5px black;
+    background-color: #bddcf1;
+    background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
+}
+
+input {
+    width: 25%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 50%;
+    border-radius: 10px;
+    display: block;
+}
+
+select {
+    width: 50%;
+}
+
+legend {
+    font-size: 30px;
 }
 
 h2 {
@@ -82,7 +110,23 @@ nav ul {
     border-top: none;
     text-transform: uppercase;
     font-family: RobotoMono-Regular;
-    }
+}
+
+.aOscuros {
+    /*  esta parte la tengo que terminar de arreglar, tengo que ver como hacer para eliminar la decoracion de los enlaces y configurar bien el hover  */
+    text-decoration: none;
+    color: purple;
+    padding: 10px;
+    margin: 10px;
+    text-align: right;
+}
+
+.aOscuros a:hover {
+    background-color: purple;
+    color: rgb(165, 224, 205);
+    border-radius: 50px;
+    padding: 20px
+}
 
 img {
     border: solid 5px black;
@@ -91,7 +135,10 @@ img {
 div {
     padding: 5px;
     border: solid 5px black;
-    margin: 10px
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #fdf86d;
+    background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
 }
 
 #EMlogo {
@@ -107,14 +154,9 @@ div {
     color: rgb(165, 224, 205);
 }
 
-.aOscuros {
-    text-decoration: none;
-    color: purple;
-}
-
 a:hover {
     color: darkslategrey;
-  }
+}
 
 #map {
     display: block;
@@ -148,7 +190,6 @@ a:hover {
 #1 {
     grid-area: 1;
 }
-
 
 #2 {
     grid-area: 2;
