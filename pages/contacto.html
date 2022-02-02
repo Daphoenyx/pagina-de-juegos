@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Formulario de contacto</title>
+
+    <!-- META Viewport tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../img/favicon-16x16.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header class=gridHeader>
+
+        <section>
+            <img src="../img/Videogame collection.webp" width="100%" height="300" alt="juegos">
+        </section>
+
+        <section>
+            <h2>Pagina de juegos</h2>
+            <nav>
+                <ul>
+                    <li><a class="aMenu" href="../index.html">Inicio</a></li>
+                    <li><a class="aMenu" href="./coleccion.html">Colección</a></li>
+                    <li><a class="aMenu" href="./recursos.html">Recursos</a></li>
+                    <li><a class="aMenu" href="./sobre.html">Sobre mi</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="EMlogo">
+            <img class="noBorder" src="../img/Elaine Marley logo.jpg" width="300" alt="Elaine Marley - Logo de la pagina">
+        </section>
+
+    </header>
+
+    <main>
+        <h3 class="animate__animated animate__backInLeft">Contactanos</h3>
+        <form action="">
+            <fieldset>
+                <legend><strong> Formulario de contacto </strong></legend>
+                <label for="Nombre"> Nombre:</label>
+                <input type="text" name="Nombre" placeholder="Nombre"><br>
+                <label for="Apellido"> Apellido:</label>
+                <input type="text" name="Apellido" placeholder="Apellido"><br>
+                <label for="Email"> Email:</label>
+                <input type="email" name="Email" placeholder="Email"><br>
+                <label for="Comentarios"> Comentarios:</label>
+                <textarea name="Comentarios" placeholder="Comentarios" cols="30" rows="10"></textarea><br>
+                Desea recibir la newsletter? <input type="checkbox" name="acepta" value="1" /> <br>
+                Como nos conoció?
+                <select name="Como nos conoció?">
+                    <option value="Redes">Redes sociales</option>
+                    <option value="Amigos">Amigos</option>
+                    <option value="Publicidad">Publicidad en paginas web</option>
+                    <option value="Otro">Otro</option>
+                </select> <br>
+                <input type="submit" value="Enviar formulario">
+                <input type="submit" value="Limpiar formulario">
+            </fieldset>
+        </form>
+    </main>
+    <hr>
+    <footer>
+        ©Visual Studio Code
+    </footer>
+</body>
+
+</html>
