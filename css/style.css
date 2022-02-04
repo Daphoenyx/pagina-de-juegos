@@ -76,9 +76,7 @@ h2 {
     background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);
     color: azure;
     padding: 40px;
-    margin-bottom: none;
-    /* le intente poner esto y margin top none al nav ul para que no haya espacio en el medio pero sigue habiendo, como lo puedo eliminar? */
-    margin: 10px;
+    margin: 10px 10px 0px 10px;
     border: solid 5px black;
     border-bottom: none;
     text-align: center;
@@ -102,8 +100,7 @@ nav ul {
     background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);
     color: azure;
     padding: 10px;
-    margin-top: none;
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
     border: solid 5px black;
     list-style-type: none;
     text-align: center;
@@ -174,44 +171,33 @@ a:hover {
 .gridMainIndex {
     display: grid;
     grid-template-areas:
-        "1 3 2";
-    "4 6 2";
-
-    /* No entiendo porque no me salen las areas que quiero... Intente cambiar los numeros para ver si me los tomaba, pero me sigue mostrando "1 2 3" etc */
-
-    /* Tambien habia probado con el codigo de abajo pero no se si es correcto, tendria que usar las areas o las fr?:
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr; */
+    "grid1 grid3 grid2"
+    "grid4 grid6 grid5";
 }
 
-
-/* Estan configuradas correctamente las areas? Les puse numeros como ejemplo, para ver si los tomaba */
-
-#1 {
-    grid-area: 1;
+#grid1 {
+    grid-area: grid1;
 }
 
-#2 {
-    grid-area: 2;
+#grid2 {
+    grid-area: grid2;
 }
 
-#3 {
-    grid-area: 3;
+#grid3 {
+    grid-area: grid3;
 }
 
-#4 {
-    grid-area: 4;
+#grid4 {
+    grid-area: grid4;
 }
 
-#5 {
-    grid-area: 5;
+#grid5 {
+    grid-area: grid5;
 }
 
-#6 {
-    grid-area: 6;
+#grid6 {
+    grid-area: grid6;
 }
-
-/* Otra consulta que tengo sobre grid, es posible poner "grid dentro de grid", osea hacer una grilla con "body" que contenga sea "header" que "main"? Digo porque cuando achico la pantalla estas dos secciones se superponen. O me convendria directamente hacer un grid con "main" y poner todo ahi adentro (eliminando header, o si o si tiene que estar?). Mi idea inicial era de hacer 3x3 bloques, pero despues lo dividi entre header y main y ahora me quedan 3 bloques al principio y 6 despues... No se si se entiende! */
 
 .noBorder {
     border: none
@@ -232,14 +218,9 @@ a:hover {
     src: url(../fonts/RobotoMono-Regular.ttf)
 }
 
-
-/* Las media queries no salieron absolutamente, no entiendo si porque estan mal configuradas ellas mismas, o porque esta mal configurado grid... Les puse colores solo para ver si estaba funcionando, pero la idea era que cada uno de los "bloques" de la pagina principal salga en fila y no alineados... */
-
-
 /* MEDIA QUERY- smartphone */
 @media (max-width: 480px) {
     main {
-        display: grid;
         grid-template-columns: 1fr;
         background-color: blue;
     }
@@ -248,19 +229,14 @@ a:hover {
 /* MEDIA QUERY - tablet */
 @media (min-width: 481px) and (max-width: 1023px) {
     main {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "grid1"
+        "grid2"
+        "grid3"
+        "grid4"
+        "grid5"
+        "grid6";
         background-image: linear-gradient(white, pink);
-        /* el color solo lo puse como prueba */
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        background-image: linear-gradient(yellow, orange);
-        /* el color solo lo puse como prueba */
     }
 }
 
