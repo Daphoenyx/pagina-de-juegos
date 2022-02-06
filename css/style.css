@@ -12,10 +12,34 @@ body {
 }
 
 header {
+    display: flex;
     font-family: LuxuriousRoman-Regular;
     justify-content: space-around;
     margin: 10px;
-    height: 50vh;
+    height: 25%;
+}
+
+.gridHeader {
+    display: grid;
+    grid-template-areas:
+        "section1 section2 EMlogo";
+}
+
+#section1 {
+    grid-area: section1;
+}
+
+#section2 {
+    grid-area: section2;
+}
+
+#EMlogo {
+    grid-area: EMlogo;
+    display: flex;
+    justify-content: space-around;
+    background-color: #00bfb2;
+    background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);
+    border: solid 5px black;
 }
 
 main {
@@ -68,7 +92,7 @@ select {
 }
 
 legend {
-    font-size: 30px;
+    font-size: 200%;
 }
 
 h2 {
@@ -138,14 +162,6 @@ div {
     background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
 }
 
-#EMlogo {
-    display: flex;
-    justify-content: space-around;
-    background-color: #00bfb2;
-    background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);
-    border: solid 5px black
-}
-
 .aMenu {
     text-decoration: none;
     color: rgb(165, 224, 205);
@@ -163,16 +179,11 @@ a:hover {
     display: flex;
 }
 
-.gridHeader {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
 .gridMainIndex {
     display: grid;
     grid-template-areas:
-    "grid1 grid3 grid2"
-    "grid4 grid6 grid5";
+        "grid1 grid3 grid2"
+        "grid4 grid6 grid5";
 }
 
 #grid1 {
@@ -220,25 +231,77 @@ a:hover {
 
 /* MEDIA QUERY- smartphone */
 @media (max-width: 480px) {
-    main {
-        grid-template-columns: 1fr;
-        background-color: blue;
+    .gridMainIndex {
+        display: grid;
+        grid-template-areas:
+            "grid1"
+            "grid2"
+            "grid3"
+            "grid4"
+            "grid5"
+            "grid6";
+    }
+
+    legend {
+        font-size: 130%;
+    }
+
+    header {
+        height: 200vh;
+    }
+
+    .gridHeader {
+        grid-template-areas:
+            "EMlogo"
+            "section2"
+            "section1";
+    }
+
+    form {
+        padding: 0px
+    }
+
+    fieldset {
+        padding: 2px;
     }
 }
 
 /* MEDIA QUERY - tablet */
 @media (min-width: 481px) and (max-width: 1023px) {
-    main {
-        grid-template-areas: 
-        "grid1"
-        "grid2"
-        "grid3"
-        "grid4"
-        "grid5"
-        "grid6";
-        background-image: linear-gradient(white, pink);
+    .gridMainIndex {
+        display: grid;
+        grid-template-areas:
+            "grid1"
+            "grid2"
+            "grid3"
+            "grid4"
+            "grid5"
+            "grid6";
     }
-}
 
-/* MEDIA QUERY - desktop - no tenia nada para cambiarle */
-@media (min-width: 1024px) {}
+    legend {
+        font-size: 130%;
+    }
+
+    header {
+        height: 200vh;
+    }
+
+    .gridHeader {
+        grid-template-areas:
+            "EMlogo"
+            "section2"
+            "section1";
+    }
+
+    form {
+        padding: 0px
+    }
+
+    fieldset {
+        padding: 2px;
+    }
+
+    /* Como puedo hacer para que el formulario en responsive no tenga tanto espacio en el lado derecho? Y para que los botones se vean "enteros"?
+    Como puedo hacer para que no haya espacios vacios entre las tres lineas del header (siempre en responsive)? Osea los bloques section1, section2 y EMlogo? */
+}
