@@ -7,50 +7,27 @@
 body {
     background-color: #d5fefd;
     background-image: linear-gradient(315deg, #d5fefd 0%, #fffcff 74%);
-    height: 200vh;
-
+    min-height: 100%;
 }
 
 header {
-    display: flex;
     font-family: LuxuriousRoman-Regular;
-    justify-content: space-around;
-    margin: 10px;
-    height: 25%;
-}
-
-.gridHeader {
-    display: grid;
-    grid-template-areas:
-        "section1 section2 EMlogo";
-}
-
-#section1 {
-    grid-area: section1;
-}
-
-#section2 {
-    grid-area: section2;
-}
-
-#EMlogo {
-    grid-area: EMlogo;
-    display: flex;
-    justify-content: space-around;
-    background-color: #00bfb2;
-    background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);
-    border: solid 5px black;
 }
 
 main {
     font-family: LuxuriousRoman-Regular;
-    margin: 10px;
-    height: 100vh;
+}
+
+.mainSection {
+    color: red;
 }
 
 footer {
     font-family: Dongle-Regular;
-    font-size: 150%;
+    font-size: 120%;
+    /* position: absolute; 
+    bottom: 0px; 
+    quisiera poner el footer para que quede abajo de todo, pero no logro hacer "funcionar" esta propiedad  */
 }
 
 article {
@@ -58,41 +35,17 @@ article {
     font-size: 90%;
 }
 
-form {
-    font-family: RobotoMono-Regular;
-    font-size: 90%;
-    padding: 30px 100px 30px 100px
-}
-
-fieldset {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px;
-    border-radius: 10px;
+h1 {
+    background-color: #00bfb2;
+    background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);
+    color: azure;
+    padding: 30px;
+    margin: 0px 10px 0px 10px;
     border: solid 5px black;
-    background-color: #bddcf1;
-    background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
-}
-
-input {
-    width: 25%;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-textarea {
-    width: 50%;
-    border-radius: 10px;
-    display: block;
-}
-
-select {
-    width: 50%;
-}
-
-legend {
-    font-size: 200%;
+    border-bottom: none;
+    text-align: center;
+    font-size: 300%;
+    font-style: bold;
 }
 
 h2 {
@@ -153,15 +106,6 @@ img {
     border: solid 5px black;
 }
 
-div {
-    padding: 5px;
-    border: solid 5px black;
-    margin: 10px;
-    border-radius: 10px;
-    background-color: #fdf86d;
-    background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
-}
-
 .aMenu {
     text-decoration: none;
     color: rgb(165, 224, 205);
@@ -175,44 +119,54 @@ a:hover {
     display: block;
 }
 
-.flexMain {
-    display: flex;
-}
-
-.gridMainIndex {
-    display: grid;
-    grid-template-areas:
-        "grid1 grid3 grid2"
-        "grid4 grid6 grid5";
-}
-
-#grid1 {
-    grid-area: grid1;
-}
-
-#grid2 {
-    grid-area: grid2;
-}
-
-#grid3 {
-    grid-area: grid3;
-}
-
-#grid4 {
-    grid-area: grid4;
-}
-
-#grid5 {
-    grid-area: grid5;
-}
-
-#grid6 {
-    grid-area: grid6;
-}
-
 .noBorder {
     border: none
 }
+
+#imgElaine {
+    border: solid 5px black;
+}
+
+/* FORM ITEMS */
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: 10px;
+    border: solid 5px black;
+    background-color: #bddcf1;
+    background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
+}
+
+form {
+    font-family: RobotoMono-Regular;
+    font-size: 90%;
+    padding: 30px 100px 30px 100px
+}
+
+input {
+    width: 25%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 50%;
+    border-radius: 10px;
+    display: block;
+}
+
+select {
+    width: 50%;
+}
+
+legend {
+    font-size: 200%;
+}
+
+/* END FORM ITEMS */
 
 @font-face {
     font-family: "LuxuriousRoman-Regular";
@@ -230,78 +184,7 @@ a:hover {
 }
 
 /* MEDIA QUERY- smartphone */
-@media (max-width: 480px) {
-    .gridMainIndex {
-        display: grid;
-        grid-template-areas:
-            "grid1"
-            "grid2"
-            "grid3"
-            "grid4"
-            "grid5"
-            "grid6";
-    }
-
-    legend {
-        font-size: 130%;
-    }
-
-    header {
-        height: 200vh;
-    }
-
-    .gridHeader {
-        grid-template-areas:
-            "EMlogo"
-            "section2"
-            "section1";
-    }
-
-    form {
-        padding: 0px
-    }
-
-    fieldset {
-        padding: 2px;
-    }
-}
+@media (max-width: 480px) {}
 
 /* MEDIA QUERY - tablet */
-@media (min-width: 481px) and (max-width: 1023px) {
-    .gridMainIndex {
-        display: grid;
-        grid-template-areas:
-            "grid1"
-            "grid2"
-            "grid3"
-            "grid4"
-            "grid5"
-            "grid6";
-    }
-
-    legend {
-        font-size: 130%;
-    }
-
-    header {
-        height: 200vh;
-    }
-
-    .gridHeader {
-        grid-template-areas:
-            "EMlogo"
-            "section2"
-            "section1";
-    }
-
-    form {
-        padding: 0px
-    }
-
-    fieldset {
-        padding: 2px;
-    }
-
-    /* Como puedo hacer para que el formulario en responsive no tenga tanto espacio en el lado derecho? Y para que los botones se vean "enteros"?
-    Como puedo hacer para que no haya espacios vacios entre las tres lineas del header (siempre en responsive)? Osea los bloques section1, section2 y EMlogo? */
-}
+@media (min-width: 481px) and (max-width: 1023px) {}

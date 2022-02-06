@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="../img/favicon-16x16.png">
@@ -21,27 +21,29 @@
 </head>
 
 <body>
-    <header class=gridHeader>
 
-        <section id="section1">
-            <img src="../img/Videogame collection.webp" width="100%" height="300" alt="juegos">
-        </section>
+    <header>
 
-        <section id="section2">
-            <h2>Pagina de juegos</h2>
-            <nav>
-                <ul>
-                    <li><a class="aMenu" href="../index.html">Inicio</a></li>
-                    <li><a class="aMenu" href="./coleccion.html">Colección</a></li>
-                    <li><a class="aMenu" href="./recursos.html">Recursos</a></li>
-                    <li><a class="aMenu" href="./contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <section id="EMlogo">
-            <a href="../index.html"><img class="noBorder" src="../img/Elaine Marley logo.jpg" width="300" alt="Elaine Marley - Logo de la pagina"></a>
-        </section>
+        <div class="container">
+            <div class="row row-cols-3">
+                <div class="col"><img src="../img/Videogame collection.webp" width="100%" height="300" alt="juegos">
+                </div>
+                <div class="col">
+                    <h1>Pagina de juegos</h1>
+                    <nav>
+                        <ul>
+                            <li><a class="aMenu" href="../index.html">Inicio</a></li>
+                            <li><a class="aMenu" href="./coleccion.html">Colección</a></li>
+                            <li><a class="aMenu" href="./recursos.html">Recursos</a></li>
+                            <li><a class="aMenu" href="./contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col"><a id="imgElaine" href="index.html""><img class=" noBorder"
+                        src="../img/Elaine Marley logo.jpg" width="300" alt="Elaine Marley - Logo de la pagina"></a>
+                </div>
+            </div>
+        </div>
 
     </header>
 
@@ -79,13 +81,33 @@
         </article>
 
     </main>
-    <hr>
+
     <footer>
-        ©Visual Studio Code
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <p class="col-md-4 mb-0 text-muted">&copy; 2022 Visual Studio Code</p>
+
+                <a href="/"
+                    class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap" /></svg>
+                </a>
+
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-muted">Inicio</a>
+                    </li>
+                    <li class="nav-item"><a href="./coleccion.html" class="nav-link px-2 text-muted">Colección</a>
+                    </li>
+                    <li class="nav-item"><a href="./recursos.html" class="nav-link px-2 text-muted">Recursos</a></li>
+                    <li class="nav-item"><a href="./contacto.html" class="nav-link px-2 text-muted">Contacto</a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
     </footer>
 
     <!-- Javascript Bootstrap -->
-    <script src="./js/bootstrap.js"></script>
+    <script src="../js/bootstrap.js"></script>
 </body>
 
 </html>

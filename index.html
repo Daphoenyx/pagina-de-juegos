@@ -22,57 +22,76 @@
 
 <body>
 
-    <header class=gridHeader>
+    <header>
 
-        <section id="section1">
-            <img src="./img/Videogame collection.webp" width="100%" height="300" alt="juegos">
-        </section>
-
-        <section id="section2">
-            <h2>Pagina de juegos</h2>
-            <nav>
-                <ul>
-                    <li><a class="aMenu" href="pages/coleccion.html">Colección</a></li>
-                    <li><a class="aMenu" href="pages/recursos.html">Recursos</a></li>
-                    <li><a class="aMenu" href="pages/sobre.html">Sobre mi</a></li>
-                    <li><a class="aMenu" href="pages/contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <section id="EMlogo">
-            <a href="index.html""><img class=" noBorder" src="./img/Elaine Marley logo.jpg" width="300"
-                alt="Elaine Marley - Logo de la pagina"></a>
-        </section>
+        <div class="container">
+            <div class="row row-cols-3">
+                <div class="col"><img src="./img/Videogame collection.webp" width="100%" height="300" alt="juegos">
+                </div>
+                <div class="col">
+                    <h1>Pagina de juegos</h1>
+                    <nav>
+                        <ul>
+                            <li><a class="aMenu" href="pages/coleccion.html">Colección</a></li>
+                            <li><a class="aMenu" href="pages/recursos.html">Recursos</a></li>
+                            <li><a class="aMenu" href="pages/sobre.html">Sobre mi</a></li>
+                            <li><a class="aMenu" href="pages/contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col"><a id="imgElaine" href="index.html""><img class=" noBorder"
+                        src="./img/Elaine Marley logo.jpg" width="300" alt="Elaine Marley - Logo de la pagina"></a>
+                </div>
+            </div>
+        </div>
 
     </header>
 
-    <main class="gridMainIndex">
+    <main>
 
-        <div id=grid1>Seccion 1</div>
-
-        <div id=grid2>Seccion 2</div>
-
-        <div id=grid3>Seccion 3</div>
-
-        <div id=grid4>Seccion 4</div>
-
-        <div id=grid5>Seccion 5</div>
-
-        <div id=grid6>Seccion 6</div>
+        <div class="container">
+            <div class="row row-cols-3">
+                <div class="col" class="mainSection">Seccion1</div>
+                <div class="col" class="mainSection">Seccion2</div>
+                <div class="col" class="mainSection">Seccion3</div>
+                <div class="col" class="mainSection">Seccion4</div>
+                <div class="col" class="mainSection">Seccion5</div>
+                <div class="col" class="mainSection">Seccion6</div>
+            </div>
+        </div>
 
     </main>
 
-    <hr>
-
     <footer>
-        ©Visual Studio Code
-    </footer>
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <p class="col-md-4 mb-0 text-muted">&copy; 2022 Visual Studio Code</p>
 
-    <!-- El footer en todas las paginas no me queda en el fondo sino en el medio...  -->
+                <a href="/"
+                    class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap" /></svg>
+                </a>
+
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="pages/coleccion.html" class="nav-link px-2 text-muted">Colección</a>
+                    </li>
+                    <li class="nav-item"><a href="pages/recursos.html" class="nav-link px-2 text-muted">Recursos</a>
+                    </li>
+                    <li class="nav-item"><a href="pages/sobre.html" class="nav-link px-2 text-muted">Sobre mi</a></li>
+                    <li class="nav-item"><a href="pages/contacto.html" class="nav-link px-2 text-muted">Contacto</a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </footer>
 
     <!-- Javascript Bootstrap -->
     <script src="./js/bootstrap.js"></script>
 </body>
 
 </html>
+
+<!-- Notes to self
+1. Change menu with Bootstrap so it changes to a small icon in responsive: https://getbootstrap.com/docs/5.1/components/navbar/
+-->
