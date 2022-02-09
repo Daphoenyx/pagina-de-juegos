@@ -22,6 +22,10 @@ main {
     color: red;
 }
 
+td {
+    font-family: RobotoMono-Regular;
+}
+
 footer {
     font-family: Dongle-Regular;
     font-size: 120%;
@@ -53,7 +57,10 @@ h2 {
     background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);
     color: azure;
     padding: 40px;
-    margin: 10px 10px 0px 10px;
+    margin: 20px;     
+
+    /* Porque no me toma el margin? */
+
     border: solid 5px black;
     border-bottom: none;
     text-align: center;
@@ -119,54 +126,26 @@ a:hover {
     display: block;
 }
 
-.noBorder {
-    border: none
-}
-
-#imgElaine {
+iframe {
     border: solid 5px black;
 }
+
+/* Porque no me toma el borde negro en iframe? Tambien probe a ponerle border al #map, pero no funciona */
 
 /* FORM ITEMS */
-
-fieldset {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px;
-    border-radius: 10px;
-    border: solid 5px black;
-    background-color: #bddcf1;
-    background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
-}
-
 form {
     font-family: RobotoMono-Regular;
+    background-color: #cab6cd;
+    background-image: linear-gradient(315deg, #cab6cd 0%, #ba8f95 74%);
     font-size: 90%;
-    padding: 30px 100px 30px 100px
-}
-
-input {
-    width: 25%;
-    padding: 10px;
+    padding: 30px 100px 30px 100px;
     border-radius: 10px;
+    border: solid 5px black;
 }
-
 textarea {
-    width: 50%;
+    width: 100%;
     border-radius: 10px;
-    display: block;
 }
-
-select {
-    width: 50%;
-}
-
-legend {
-    font-size: 200%;
-}
-
-/* END FORM ITEMS */
 
 @font-face {
     font-family: "LuxuriousRoman-Regular";

@@ -5,7 +5,7 @@
     <title>Formulario de contacto</title>
 
     <!-- META Viewport tag -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.css">
@@ -39,8 +39,8 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col"><a id="imgElaine" href="index.html""><img class=" noBorder"
-                        src="../img/Elaine Marley logo.jpg" width="300" alt="Elaine Marley - Logo de la pagina"></a>
+                <div class="col"><a href="../index.html""><img src=" ../img/Elaine Marley logo.jpg" width="300"
+                        alt="Elaine Marley - Logo de la pagina"></a>
                 </div>
             </div>
         </div>
@@ -49,28 +49,42 @@
 
     <main>
         <h3 class="animate__animated animate__backInLeft">Contactanos</h3>
-        <form>
-            <fieldset>
-                <legend><strong> Formulario de contacto </strong></legend>
-                <label for="Nombre"> Nombre:</label>
-                <input type="text" name="Nombre" placeholder="Nombre"><br>
-                <label for="Apellido"> Apellido:</label>
-                <input type="text" name="Apellido" placeholder="Apellido"><br>
-                <label for="Email"> Email:</label>
-                <input type="email" name="Email" placeholder="Email"><br>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="Nombre" class="form-label">Nombre:</label>
+                <input type="text" name="Nombre" placeholder="Nombre" class="form-control" id="inputName">
+            </div>
+            <div class="col-md-6">
+                <label for="Apellido" class="form-label">Apellido:</label>
+                <input type="text" name="Apellido" placeholder="Apellido" class="form-control" id="inputSurname">
+            </div>
+            <div class="col-12">
+                <label for="inputEmail" class="form-label">Email:</label>
+                <input type="text" name="Email" placeholder="Email" class="form-control" id="inputEmail">
+            </div>
+            <div class="col-12">
                 <label for="Comentarios"> Comentarios:</label>
-                <textarea name="Comentarios" placeholder="Comentarios" cols="30" rows="10"></textarea><br>
-                Desea recibir la newsletter? <input type="checkbox" name="acepta" value="1" /> <br>
-                Como nos conoció?
-                <select name="Como nos conoció?">
-                    <option value="Redes">Redes sociales</option>
-                    <option value="Amigos">Amigos</option>
-                    <option value="Publicidad">Publicidad</option>
-                    <option value="Otro">Otro</option>
-                </select> <br>
-                <input type="submit" value="Enviar formulario">
-                <input type="submit" value="Limpiar formulario">
-            </fieldset>
+                <textarea name="Comentarios" placeholder="Comentarios" rows="10"></textarea>
+            </div>
+            <div class="col-md-6">
+                <label for="inputState" class="form-label">Como nos conoció?</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Seleccione...</option>
+                    <option>Redes sociales</option>
+                    <option>Amigos</option>
+                    <option>Banners</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+            <div class="col-md-6"> Desea recibir la newsletter?
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar formulario</button>
+                <button type="submit" class="btn btn-primary">Limpiar formulario</button>
+            </div>
         </form>
     </main>
 
