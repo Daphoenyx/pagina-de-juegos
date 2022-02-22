@@ -24,6 +24,18 @@ main {
     font-size: 150%;
 }
 
+.mainSectionItalic {
+    @extend .mainSection;
+    background-color: #559c98;
+    font-style: italic;
+}
+
+.mainSectionBold {
+    @extend .mainSection;
+    background-color: rgb(160, 144, 56);
+    font-weight: bold;
+}
+
 td {
     font-family: RobotoMono-Regular;
 }

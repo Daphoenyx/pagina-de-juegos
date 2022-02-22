@@ -31,7 +31,7 @@ main {
   font-family: LuxuriousRoman-Regular;
 }
 
-.mainSection {
+.mainSection, .mainSectionBold, .mainSectionItalic {
   background-color: #00bfb2;
   border-radius: 10px;
   padding: 25px;
@@ -39,6 +39,16 @@ main {
   border: solid 5px black;
   text-align: right;
   font-size: 150%;
+}
+
+.mainSectionItalic {
+  background-color: #559c98;
+  font-style: italic;
+}
+
+.mainSectionBold {
+  background-color: #a09038;
+  font-weight: bold;
 }
 
 td {
@@ -165,13 +175,19 @@ textarea {
   border-radius: 10px;
 }
 
+.button {
+  background-color: rgba(128, 0, 128, 0.562);
+  color: azure;
+}
+
 /* Smartphone */
 /* Tablet */
 @media (min-width: 481px) and (max-width: 1023px) {
   h1 {
     font-size: 120%;
     border: solid 3px black;
-    border-bottom: none;
+    padding: 10px;
+    margin: 10px;
   }
 
   h2 {
@@ -194,18 +210,18 @@ textarea {
     font-size: 80%;
   }
 
-  .mainSection {
+  .mainSection, .mainSectionItalic, .mainSectionBold {
     border-radius: 3%;
     border: solid 3px black;
   }
 
   nav ul {
     border: solid 3px black;
-    border-top: none;
   }
 
   img {
     border: solid 3px black;
+    margin: 10px;
   }
 
   #fotoJuegos {
@@ -218,6 +234,32 @@ textarea {
     border-radius: 10px;
     border: solid 3px black;
   }
+}
+.mainSectionBlue {
+  color: #a9a9c9;
+  background-color: blue;
+}
+
+.mainSectionOrange {
+  color: #6b614d;
+  background-color: orange;
+}
+
+.mainSectionGreen {
+  color: #a3dba3;
+  background-color: green;
+}
+
+.paradox {
+  color: brown;
+}
+
+.frogwares {
+  color: green;
+}
+
+.kingArt {
+  color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,7 +8,8 @@
     h1 {
         font-size: 120%;
         border: solid 3px black;
-        border-bottom: none;
+        padding: 10px;
+        margin: 10px;
     }
 
     h2 {
@@ -34,16 +35,15 @@
     .mainSection {
         border-radius: 3%;
         border: solid 3px black;
-        ;
     }
 
     nav ul {
         border: solid 3px black;
-        border-top: none;
     }
 
     img {
         border: solid 3px black;
+        margin: 10px;
     }
 
     #fotoJuegos {

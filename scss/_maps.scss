@@ -1,0 +1,18 @@
+
+$developers : (
+    paradox: brown,
+    frogwares: green,
+    kingArt: blue,
+);
+
+.paradox {
+    color: map-get($developers, paradox);
+}
+
+.frogwares {
+    color: map-get($developers, frogwares);
+}
+
+.kingArt {
+    color: map-get($developers, kingArt);
+}
