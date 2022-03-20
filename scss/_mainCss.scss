@@ -14,28 +14,6 @@ main {
     font-family: LuxuriousRoman-Regular;
 }
 
-.mainSection {
-    background-color: #00bfb2;
-    border-radius: 10px;
-    padding: 3%;
-    margin: 3% 0% 3% 0%;
-    border: solid 5px black;
-    text-align: right;
-    font-size: 150%;
-}
-
-.mainSectionItalic {
-    @extend .mainSection;
-    background-color: #559c98;
-    font-style: italic;
-}
-
-.mainSectionBold {
-    @extend .mainSection;
-    background-color: rgb(160, 144, 56);
-    font-weight: bold;
-}
-
 td {
     font-family: RobotoMono-Regular;
 }
@@ -107,6 +85,14 @@ nav ul {
 #mainColeccion {
     margin-left: 10%;
     margin-right: 10%;
+}
+
+#imageHeader {
+    width: 100%;
+}
+
+#table {
+    font-size: 100%;
 }
 
 iframe {

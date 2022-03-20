@@ -1,7 +1,65 @@
 //Media queries
 
 /* Smartphone */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 120%;
+        border: solid 3px black;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    h2 {
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 10px 30px 10px;
+        border: solid 3px black;
+        font-size: 150%;
+    }
+
+    h3 {
+        font-size: 80%;
+    }
+
+    .article2 {
+        font-size: 50%;
+    }
+
+    .aMenu {
+        font-size: 80%;
+    }
+
+    .mainSection {
+        border-radius: 3%;
+        border: solid 3px black;
+    }
+
+    nav ul {
+        border: solid 3px black;
+    }
+
+    img {
+        border: solid 3px black;
+        margin: 10px;
+    }
+
+    form {
+        padding: 10px;
+        border-radius: 10px;
+        border: solid 3px black;
+    }
+
+    #imageHeader {
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #table {
+        font-size: 60%;
+    }
+}
 
 /* Tablet */
 @media (min-width: 481px) and (max-width: 1023px) {
@@ -46,14 +104,13 @@
         margin: 10px;
     }
 
-    #fotoJuegos {
-        width: 100%;
-        height: 50%;
-    }
-
     form {
         padding: 10px;
         border-radius: 10px;
         border: solid 3px black;
+    }
+
+    #table {
+        font-size: 80%;
     }
 }
